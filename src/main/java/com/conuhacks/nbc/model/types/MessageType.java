@@ -15,6 +15,14 @@ public enum MessageType {
 
     private String name;
 
+    public static MessageType getByName(String name) {
+        for (MessageType value : MessageType.values())
+            if (name.equalsIgnoreCase(value.name))
+                return value;
+
+        return null;
+    }
+
     MessageType(String name) {
         this.name = name;
     }

@@ -8,7 +8,7 @@ import lombok.Data;
 public class Symbol {
 
     private String symbol;
-    private int price;
+    private double price;
     private String exchange;
 
 }

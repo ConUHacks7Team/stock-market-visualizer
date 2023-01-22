@@ -17,8 +17,8 @@ public class ExchangeController {
     public List<String> getExchanges() {
         return NbcStockMarketApplication.getExchangePersistence()
                 .getExchanges()
+                .keySet()
                 .stream()
-                .map(Exchange::getName)
                 .toList();
     }
 

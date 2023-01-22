@@ -2,14 +2,17 @@ package com.conuhacks.nbc.persistency;
 
 import com.conuhacks.nbc.model.Exchange;
 import lombok.Data;
-import lombok.RequiredArgsConstructor;
 
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 @Data
-@RequiredArgsConstructor
 public class ExchangePersistence {
 
-    private List<Exchange> exchanges;
+    private Map<String, Exchange> exchanges;
+
+    public ExchangePersistence() {
+        this.exchanges = new HashMap<>();
+    }
 
 }

@@ -7,6 +7,14 @@ public enum DirectionType {
 
     private String name;
 
+    public static DirectionType getByName(String name) {
+        for (DirectionType value : DirectionType.values())
+            if (name.equalsIgnoreCase(value.name))
+                return value;
+
+        return null;
+    }
+
     DirectionType(String name) {
         this.name = name;
     }
