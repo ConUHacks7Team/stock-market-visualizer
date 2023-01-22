@@ -1,11 +1,10 @@
 import './App.css';
 import Sidebar from './components/sidebar/Sidebar';
-import Navbar from './components/navbar/Navbar';
 
 function App() {
   return (
-    <div className="">
-      <Sidebar />
+    <div className="grid grid-cols-12 h-screen">
+      <Sidebar className="col-span-12" />
     </div>
   );
 }
