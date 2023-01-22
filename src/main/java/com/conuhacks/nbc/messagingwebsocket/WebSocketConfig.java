@@ -1,4 +1,4 @@
-package com.conuhacks.nbc.messaging;
+package com.conuhacks.nbc.messagingwebsocket;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.socket.config.annotation.*;

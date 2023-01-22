@@ -1,4 +1,4 @@
-package com.conuhacks.nbc.messaging;
+package com.conuhacks.nbc.messagingwebsocket;
 
 import org.json.JSONObject;
 import org.springframework.web.socket.TextMessage;
