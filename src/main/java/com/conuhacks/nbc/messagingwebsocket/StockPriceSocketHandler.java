@@ -11,10 +11,14 @@ public class StockPriceSocketHandler extends TextWebSocketHandler {
     @Override
     public void handleTextMessage(WebSocketSession session, TextMessage message) throws InterruptedException, IOException {
         String payload = message.getPayload();
-        JSONObject jsonObject = new JSONObject(payload);
+        JSONObject jsonRequest = new JSONObject(payload);
+        JSONObject jsonResponse = new JSONObject();
 
+        jsonResponse.put("response", "stock");
+        jsonResponse.put("symbol", jsonRequest.get("symbol"));
+        jsonResponse.put("price", 420.69);
 
-        session.sendMessage(new TextMessage("Hi " + jsonObject.get("user") + " how may we help you?"));
+        session.sendMessage(new TextMessage(jsonResponse.toString()));
     }
 
 }
