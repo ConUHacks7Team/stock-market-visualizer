@@ -10,6 +10,6 @@ import java.util.Map;
 public class Exchange {
 
     private String name;
-    private Map<String, Stock> stockMap;
+    private Map<String, Symbol> symbolMap;
 
 }
